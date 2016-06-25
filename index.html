@@ -34,11 +34,11 @@
 	<div id="graph"><div class="popover"></div></div>
 	<script type="text/javascript">
 		d3.json('signature_count.json', function(data) {
-			var max = d3.max(data, function(data) {
-				return data["value"];
+			var max = d3.max(data, function(element) {
+				return element["value"];
 			});
-			var min = d3.min(data, function(data) {
-				return data["value"];
+			var min = d3.min(data, function(element) {
+				return element["value"];
 			});
 			console.log(max);
 			console.log(min);
