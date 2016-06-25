@@ -21,7 +21,7 @@
 	<div id="graph"><div class="popover"></div></div>
 	<script type="text/javascript">
 		d3.json('signature_count.json', function(data) {
-			data = MG.convert.date(data, 'date');
+			data = MG.convert.date(data, 'date', '%a %b %d %H:%M:%S %Z %Y');
 			MG.data_graphic({
 				title: document.title,
 				data: data,
