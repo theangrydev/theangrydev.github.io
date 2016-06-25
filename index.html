@@ -1,1 +1,35 @@
-test
+<!doctype html>
+<head>
+	<meta charset=utf-8>
+	<title>EU Referendum Rules triggering a 2nd EU Referendum</title>
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js" charset="utf-8"></script>
+	<script src="metricsgraphics.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="metricsgraphics.css">
+	<style>	
+		body {
+			margin: 0;
+		}
+		#graph {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="graph"><div class="popover"></div></div>
+	<script type="text/javascript">
+		d3.json('signature_count.json', function(data) {
+			MG.data_graphic({
+				title: document.title,
+				data: data,
+				width: $(document).width(),
+				height: $(document).height(),
+				target: '#graph',
+				x_accessor: 'date',
+				y_accessor: 'value',
+			})
+		});		
+	</script>
+</body>
