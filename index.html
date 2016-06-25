@@ -37,9 +37,6 @@
 			var max = d3.max(data, function(element) {
 				return +element["value"];
 			});
-			var min = d3.min(data, function(element) {
-				return +element["value"];
-			});
 			console.log(max);
 			console.log(min);
 			data = MG.convert.date(data, 'date', '%a %b %d %H:%M:%S %Z %Y');
